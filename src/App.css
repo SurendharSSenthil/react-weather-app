@@ -12,11 +12,12 @@
 }
 
 .app-warm {
-  background-image: url(./chuttersnap-TSgwbumanuE-unsplash.jpg);
+  background: linear-gradient(to bottom, #a95af8, #a020ab,#0994ea);
 }
 
+
 .app-cold {
-  background-image: url('wallpaperflare.com_wallpaper.jpg');
+  background: linear-gradient(to bottom,#2491ea,#0fe066,#10eff7);
 }
 
 .Body {
