@@ -1,10 +1,11 @@
-*{
+* {
   padding: 0;
   margin: 0;
   color: #fff;
 }
 
-.app-warm{
+/* Styles for larger screens (desktop) */
+.app-warm {
   background-image: url(./chuttersnap-TSgwbumanuE-unsplash.jpg);
   min-height: 100vh;
   min-width: 10vw;
@@ -12,15 +13,15 @@
   background-repeat: no-repeat;
 }
 
-.app-cold{
-background-image: url('wallpaperflare.com_wallpaper.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-min-height: 100vh;
-min-width: 10vw;
+.app-cold {
+  background-image: url('wallpaperflare.com_wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 10vw;
 }
 
-.Body{
+.Body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +29,7 @@ min-width: 10vw;
   justify-content: center;
 }
 
-nav input{
+nav input {
   background-color: inherit;
   padding: 10px;
   border-radius: 10px;
@@ -40,18 +41,43 @@ nav input{
   min-width: 50%;
 }
 
-
-.info-container{
+.info-container {
   font-size: 2rem;
   font-weight: 700;
 }
 
-.Desc{
+.Desc {
   position: relative;
   top: 20px;
 }
 
-.footer{
+.footer {
   position: absolute;
   bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .app-warm, .app-cold {
+    min-height: auto;
+  }
+
+  .nav input {
+    font-size: 16px;
+    top: 5px;
+    left: 10%;
+    min-width: 80%;
+  }
+
+  .info-container {
+    font-size: 1.5rem;
+  }
+
+  .Desc {
+    top: 10px;
+  }
+
+  .footer {
+    bottom: 5px;
+  }
 }
