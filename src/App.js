@@ -41,7 +41,7 @@ function App() {
         <div className='city-info'>{search}</div>
         <div className='Temp'>{`${temp} C`}</div>
       </div>
-      <div className='Desc'>{`Description : {desc}`}</div> 
+      <div className='Desc'>{desc}</div> 
       <div className='footer'>&copy;Surendhar Senthil</div>
       </div>
     </div>
