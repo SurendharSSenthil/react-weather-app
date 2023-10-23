@@ -4,21 +4,19 @@
   color: #fff;
 }
 
-/* Styles for larger screens (desktop) */
-.app-warm {
-  background-image: url(./chuttersnap-TSgwbumanuE-unsplash.jpg);
-  min-height: 100vh;
-  min-width: 10vw;
+.app-warm, .app-cold {
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 10vw;
+}
+
+.app-warm {
+  background-image: url(./chuttersnap-TSgwbumanuE-unsplash.jpg);
 }
 
 .app-cold {
   background-image: url('wallpaperflare.com_wallpaper.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  min-width: 10vw;
 }
 
 .Body {
@@ -56,13 +54,13 @@ nav input {
   bottom: 10px;
 }
 
-
 @media (max-width: 768px) {
   .app-warm, .app-cold {
     min-height: auto;
+    min-width: auto;
   }
 
-  .nav input {
+  nav input {
     font-size: 16px;
     top: 5px;
     left: 10%;
@@ -79,5 +77,31 @@ nav input {
 
   .footer {
     bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-warm, .app-cold {
+    min-height: auto;
+    min-width: auto;
+  }
+
+  nav input {
+    font-size: 14px;
+    top: 5px;
+    left: 10%;
+    min-width: 80%;
+  }
+
+  .info-container {
+    font-size: 1.2rem;
+  }
+
+  .Desc {
+    top: 5px;
+  }
+
+  .footer {
+    bottom: 2px;
   }
 }
