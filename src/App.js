@@ -16,7 +16,7 @@ function App() {
   const [sunset, setSunSet] = useState('');
   const [pre, setPre] = useState(0);
   const [hum, setHum] = useState(0);
-  const [Weather, setWeather] = useState(null);
+
 
   const handleSubmit = (e) => {
     if (e.key === 'Enter') {
@@ -24,7 +24,6 @@ function App() {
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          setWeather(data.weather[0].main);
           setTemp(data.main.temp.toFixed(1));
           setDesc(data.weather[0].main);
           setWindSpeed(data.wind.speed);
