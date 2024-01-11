@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWind,faSun } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot,faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
@@ -46,7 +46,7 @@ function App() {
 
   useEffect(() => {
     handleSubmit({ key: 'Enter' });
-  }, []);
+  }, [handleSubmit]);
 
   return (
     <div className="app app-warm">
