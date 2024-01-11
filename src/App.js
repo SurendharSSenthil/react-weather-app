@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot,faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ function App() {
   const [hum, setHum] = useState(0);
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     if (e.key === 'Enter') {
       fetch(`${REACT_APP_API_URL}weather?q=${search}&appid=${REACT_APP_API_KEY}&units=metric`)
         .then(response => response.json())
@@ -37,15 +37,17 @@ function App() {
           setTemp("City Not Found");
         });
     }
-  };
-
-  function convertEpochToTime(epoch) {
-    return new Date(epoch * 1000).toLocaleTimeString();
-  }
+  }, [search, setTemp, setDesc, setWindSpeed, setSunRise, setSunSet, setPre, setHum]);
 
   useEffect(() => {
     handleSubmit({ key: 'Enter' });
   }, [handleSubmit]);
+
+
+
+  function convertEpochToTime(epoch) {
+    return new Date(epoch * 1000).toLocaleTimeString();
+  }
 
   return (
     <div className="app app-warm">
